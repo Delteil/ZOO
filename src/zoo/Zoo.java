@@ -1,5 +1,7 @@
 package zoo;
 
+import java.util.Arrays;
+
 public class Zoo {
 
 	// Attributs de la classe Zoo
@@ -23,32 +25,34 @@ public class Zoo {
 		zones[INDICE_ZONE_VOLIERE] = new Zone("Voliere");
 	}
 
-	// méthode AddAnimalToZone
+	// méthode AddAnimalToZone : ajout d'un animal (paramètre animalAAjouter) dans le tableau Zone en vérifiant les conditions d'appartenance à la zone.
 
-	public void addAnimalToZone (Animal animal) { // méthode addAnimalToZone de type Animal)
+
+	public void addAnimalToZone (Animal animalAAjouter) { // méthode addAnimalToZone de type Animal et paramètre animalAAjouter)
 		
-		if (animal instanceof Mammifères) && (regimeAlimentaire equals "carnivore") {
-			zones[INDICE_ZONE_CARNIVORES] = animal
+		if (animalAAjouter instanceof Mammifères && animalAAjouter.getRegimeAlimentaire().equals("carnivore")) {
+			zones[INDICE_ZONE_CARNIVORES].addAnimal(animalAAjouter); 
+			
+		} else if (animalAAjouter instanceof Mammifères && animalAAjouter.getRegimeAlimentaire().equals("herbivore")) {
+			zones[INDICE_ZONE_SAVANE_AFRICAINE].addAnimal(animalAAjouter);	
+			
+		} else if (animalAAjouter instanceof Reptile) {
+			zones[INDICE_ZONE_FERME_REPTILES].addAnimal(animalAAjouter);
+			
+		} else if (animalAAjouter instanceof Oiseaux) {
+			zones[INDICE_ZONE_VOLIERE].addAnimal(animalAAjouter);
+		} else if (animalAAjouter instanceof Poisson) {
+			zones[INDICE_ZONE_AQUARIUM].addAnimal(animalAAjouter);
 		}
-		if (animal instanceof Mammifères) && (regimeAlimentaire equals to herbivore) {
-			zones[INDICE_ZONE_SAVANE_AFRICAINE] = animal	
-		}
-		if (animal instanceof Reptile) {
-			zones[INDICE_ZONE_FERME_REPTILES] = animal
-		}
-		if (animal instanceof Oiseaux) {
-			zones[INDICE_ZONE_VOLIERE] = animal
-		}
-		if (animal instanceof Poisson) {
-			zones[INDICE_ZONE_AQUARIUM] = animal
-		}
-		
 	}
 
-	// constructeur addAnimalToZone
-
 	// toString ZOO
-
+	
+	@Override
+	public String toString() {
+		return "Zoo [zones=" + Arrays.toString(zones) + "]";
+	}
+	
 	protected Zone[] getZone() {
 		return zones;
 	}
