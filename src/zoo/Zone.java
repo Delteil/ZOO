@@ -9,8 +9,7 @@ public class Zone {
 	private String nom = null;
 	private Animal[] animaux; // tableau de la liste d'animaux ds classe Animaux
 
-	
-	// Constructeur 
+	// Constructeur
 	public Zone(String nom) {
 		super();
 		this.nom = nom;
@@ -18,8 +17,18 @@ public class Zone {
 
 	@Override
 	public String toString() {
-		return "Zone [nom=" + nom + ", animaux=" + Arrays.toString(animaux) + "]";
+		return "Zone =  " + nom +  "\r\n animaux = " + Arrays.toString(animaux);
 	}
+
+	/*
+	 * Parcourir tableau dans méthode toString
+	 * 
+	 * String result = "Zone " + nom + "\r\n";
+	 * 
+	 * for (Animal animal : animaux) { result += animal.toString() + "\r\n"; }
+	 * 
+	 * return result;
+	 */
 
 	// Ajout nouvel Animal
 
@@ -36,9 +45,9 @@ public class Zone {
 			for (int i = 0; i < animaux.length; i++) {
 				animalTemp[i] = animaux[i]; // tableau Temp prend les valeurs de Tableau
 			}
-			animalTemp[animalTemp.length] = animalAAjouter;
+			animalTemp[animalTemp.length - 1] = animalAAjouter;
 
-			this.animaux = animalTemp; // tableau animaux prend les valeurs du tableau animalTemp
+			animaux = animalTemp; // tableau animaux prend les valeurs du tableau animalTemp
 		}
 	}
 
@@ -56,8 +65,6 @@ public class Zone {
 
 	public void setAnimal(Animal[] animaux) {
 		this.animaux = animaux;
-		
-		
 
 	}
 

@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Zoo {
 
 	// Attributs de la classe Zoo
-	
+
 	private Zone[] zones;
 
 	public static final int INDICE_ZONE_SAVANE_AFRICAINE = 0;
@@ -15,7 +15,7 @@ public class Zoo {
 	public static final int INDICE_ZONE_VOLIERE = 4;
 
 	// constructeur Tableau
-	
+
 	public Zoo() {
 		zones = new Zone[5];
 		zones[INDICE_ZONE_SAVANE_AFRICAINE] = new Zone("Savane africaine");
@@ -25,20 +25,18 @@ public class Zoo {
 		zones[INDICE_ZONE_VOLIERE] = new Zone("Voliere");
 	}
 
-	// méthode AddAnimalToZone : ajout d'un animal (paramètre animalAAjouter) dans le tableau Zone en vérifiant les conditions d'appartenance à la zone.
+	// méthode AddAnimalToZone : ajout d'un animal (paramètre animalAAjouter) dans
+	// le tableau Zone en vérifiant les conditions d'appartenance à la zone.
 
+	public void addAnimalToZone(Animal animalAAjouter) { // méthode addAnimalToZone de type Animal et paramètre
+															// animalAAjouter)
 
-	public void addAnimalToZone (Animal animalAAjouter) { // méthode addAnimalToZone de type Animal et paramètre animalAAjouter)
-		
 		if (animalAAjouter instanceof Mammifères && animalAAjouter.getRegimeAlimentaire().equals("carnivore")) {
-			zones[INDICE_ZONE_CARNIVORES].addAnimal(animalAAjouter); 
-			
+			zones[INDICE_ZONE_CARNIVORES].addAnimal(animalAAjouter);
 		} else if (animalAAjouter instanceof Mammifères && animalAAjouter.getRegimeAlimentaire().equals("herbivore")) {
-			zones[INDICE_ZONE_SAVANE_AFRICAINE].addAnimal(animalAAjouter);	
-			
+			zones[INDICE_ZONE_SAVANE_AFRICAINE].addAnimal(animalAAjouter);
 		} else if (animalAAjouter instanceof Reptile) {
 			zones[INDICE_ZONE_FERME_REPTILES].addAnimal(animalAAjouter);
-			
 		} else if (animalAAjouter instanceof Oiseaux) {
 			zones[INDICE_ZONE_VOLIERE].addAnimal(animalAAjouter);
 		} else if (animalAAjouter instanceof Poisson) {
@@ -47,12 +45,12 @@ public class Zoo {
 	}
 
 	// toString ZOO
-	
+
 	@Override
 	public String toString() {
-		return "Zoo [zones=" + Arrays.toString(zones) + "]";
+		return "Zoo \r\n" + Arrays.toString(zones) + "\r\n";
 	}
-	
+
 	protected Zone[] getZone() {
 		return zones;
 	}

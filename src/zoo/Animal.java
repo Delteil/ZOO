@@ -3,18 +3,17 @@ package zoo;
 public abstract class Animal {
 
 	// Attributs de la classe Animal
-	
+
 	protected String nom = null;
 	protected String type = null;
 	protected String regimeAlimentaire = null;
 
-	//definition de constantes
-	
-	public static final String REGIME_CARNIVORE = "carnivore"; 
+	// definition de constantes
+
+	public static final String REGIME_CARNIVORE = "carnivore";
 	public static final String REGIME_HERBIVORE = "herbivore";
 	public static final String REGIME_OMNIVORE = "omnivore";
 
-	
 	// Constructeur
 
 	protected Animal(String nom, String type, String regimeAlimentaire) {
@@ -22,8 +21,13 @@ public abstract class Animal {
 		this.nom = nom;
 		this.type = type;
 		this.regimeAlimentaire = regimeAlimentaire;
-		
-		
+	}
+
+	// toString
+
+	@Override
+	public String toString() {
+		return "nom = " + nom + ", type = " + type + ", regimeAlimentaire = " + regimeAlimentaire + "\r\n";
 	}
 
 	protected String getNom() {
