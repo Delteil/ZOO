@@ -28,6 +28,7 @@ class ZooTest {
 		Mammiferes mNew = new Mammiferes("Jane", RaceEnum.LION, SexeEnum.FEMELLE, "0");
 		Mammiferes mNew2 = new Mammiferes("Doe", RaceEnum.LION, SexeEnum.MALE, "1");
 		assertTrue(this.animalAccouple = animalAccouple);
+		
 			
 	}
 	
