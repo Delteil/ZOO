@@ -1,7 +1,8 @@
 package zoo;
 
 /**
- * @author Amandine Delteil
+ * @author Amandine Deltei
+ * l
  */
 
 public abstract class Animal {

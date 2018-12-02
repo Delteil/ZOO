@@ -1,8 +1,7 @@
 package zoo;
 
 /**
- * 
- * @author Delteil
+ * @author Amandine Delteil
  *
  */
 
