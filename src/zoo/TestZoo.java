@@ -1,6 +1,6 @@
 package zoo;
 
-import zoo.Mammifères;
+import zoo.Mammiferes;
 import zoo.Poisson;
 import zoo.Reptile;
 import zoo.Oiseaux;
@@ -17,11 +17,11 @@ public class TestZoo {
 		 * toString associé à la classe fille) => polymorphisme
 		 */
 
-		zoo.addAnimalToZone(new Mammifères("Simba", "Lion", "carnivore"));
-		zoo.addAnimalToZone(new Mammifères("Lana", "Lionne", "carnivore"));
-		zoo.addAnimalToZone(new Mammifères("Gazella", "Gazelle", "herbivore"));
-		zoo.addAnimalToZone(new Mammifères("Anti", "Antiloppe", "herbivore"));
-		zoo.addAnimalToZone(new Mammifères("Zou", "Zèbre", "herbivore"));
+		zoo.addAnimalToZone(new Mammiferes("Simba", "Lion", "carnivore"));
+		zoo.addAnimalToZone(new Mammiferes("Lana", "Lionne", "carnivore"));
+		zoo.addAnimalToZone(new Mammiferes("Gazella", "Gazelle", "herbivore"));
+		zoo.addAnimalToZone(new Mammiferes("Anti", "Antiloppe", "herbivore"));
+		zoo.addAnimalToZone(new Mammiferes("Zou", "Zèbre", "herbivore"));
 		zoo.addAnimalToZone(new Poisson("BouffeTout", "Requin", "carnivore"));
 		zoo.addAnimalToZone(new Poisson("Mélanie", "Morue", "omnivore"));
 		zoo.addAnimalToZone(new Reptile("Ecaille", "Anaconda", "carnivore"));
