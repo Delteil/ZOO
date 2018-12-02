@@ -20,21 +20,25 @@ public class TestAccouplementZoo {
 
 		m1.setAnimalAccouple(m2);
 		System.out.println(m1.toString());
+		System.out.println();
 
 		m2.setAnimalAccouple(m1);
 		System.out.println(m2.toString());
+		System.out.println();
 
 		m3.setAnimalAccouple(m4);
 		System.out.println(m3.toString());
+		System.out.println();
 
 		m4.setAnimalAccouple(m3);
 		System.out.println(m4.toString());
-
+		System.out.println();
+		
 		m5.setAnimalAccouple(m6);
 		System.out.println(m5.toString());
+		System.out.println();
 
 		m6.setAnimalAccouple(m2);
-	
 		System.out.println(m6.toString());
 
 	}

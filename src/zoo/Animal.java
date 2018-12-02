@@ -129,17 +129,28 @@ public abstract class Animal {
 	 * 
 	 * @param animalAccouple : données enregistrées seulement si l'animal est une
 	 *                       femelle de même race
+	 * @return
 	 */
-	public void setAnimalAccouple(Animal animalAccouple) {
+	public boolean setAnimalAccouple(Animal animalAccouple) {
 
-		if (this.sexe == SexeEnum.MALE && animalAccouple.getSexe() == SexeEnum.FEMELLE
-				&& animalAccouple.getRace() == this.race) {
+		boolean verifAccouplement = false;
 
-			this.animalAccouple = animalAccouple;
-
-		} else {
-			System.out.println("Cet animal " + getNom() + " " + getRace() + " ne peut pas être enregistre pour l'accouplement avec " + getRace() + " " + getSexe());
+		if (this.sexe.equals(SexeEnum.MALE)) {
+			if (animalAccouple.getSexe().equals(SexeEnum.FEMELLE)) {
+				if (animalAccouple.getRace().equals(this.race)) {
+					verifAccouplement = true;
+					this.animalAccouple = animalAccouple;
+				} 
+				else {
+					System.out.println("l'animal " + animalAccouple.getRace() + " n'est pas de même race");
+				}
+			} else {
+				System.out.println("l'animal " + animalAccouple.getSexe() + " est de même sexe");
 			}
+		} else {
+			System.out.println("impossible, l'information est stockée chez le male de la race");
+		}
+		return verifAccouplement;
 	}
 
 	public static String getRegimeCarnivore() {
