@@ -16,6 +16,7 @@ public class TestAccouplementZoo {
 		Mammiferes m4 = new Mammiferes("Nanou", RaceEnum.ZEBRE, SexeEnum.FEMELLE, "215");
 		Mammiferes m5 = new Mammiferes("Tigrou", RaceEnum.TIGRE, SexeEnum.MALE, "650");
 		Mammiferes m6 = new Mammiferes("Sharkan", RaceEnum.TIGRE, SexeEnum.MALE, "620");
+		
 
 		m1.setAnimalAccouple(m2);
 		System.out.println(m1.toString());

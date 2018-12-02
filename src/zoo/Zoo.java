@@ -31,9 +31,9 @@ public class Zoo {
 	public void addAnimalToZone(Animal animalAAjouter) { // méthode addAnimalToZone de type Animal et paramètre
 															// animalAAjouter)
 
-		if (animalAAjouter instanceof Mammifères && animalAAjouter.getRegimeAlimentaire().equals("carnivore")) {
+		if (animalAAjouter instanceof Mammiferes && animalAAjouter.getRegimeAlimentaire().equals("carnivore")) {
 			zones[INDICE_ZONE_CARNIVORES].addAnimal(animalAAjouter);
-		} else if (animalAAjouter instanceof Mammifères && animalAAjouter.getRegimeAlimentaire().equals("herbivore")) {
+		} else if (animalAAjouter instanceof Mammiferes && animalAAjouter.getRegimeAlimentaire().equals("herbivore")) {
 			zones[INDICE_ZONE_SAVANE_AFRICAINE].addAnimal(animalAAjouter);
 		} else if (animalAAjouter instanceof Reptile) {
 			zones[INDICE_ZONE_FERME_REPTILES].addAnimal(animalAAjouter);
